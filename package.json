@@ -1,0 +1,18 @@
+{
+  "name": "guides-and-methods-astro",
+  "version": "1.0.0",
+  "description": "Prototype of 18F's Guides and Methods using the Astro static site generator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^2.4.4"
+  }
+}
