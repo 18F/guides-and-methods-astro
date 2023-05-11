@@ -1,5 +1,22 @@
 ---
-const pageTitle = "About Me";
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "About";
+const identity = {
+  orgName: "18F",
+  country: "United States of America",
+  agency: "GSA",
+  content_types: ["blog posts", "guides", "methods"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "Python", "Ruby", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -9,12 +26,35 @@ const pageTitle = "About Me";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content = {Astro.generator} >
     <title>{pageTitle}</title>
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitle}</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, neque praesentium, voluptates soluta provident consectetur delectus, sapiente aut eligendi et beatae cupiditate aliquid saepe vitae vero? Adipisci ducimus quasi ipsam.</p>
+    <BaseLayout pageTitle={pageTitle}>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, neque praesentium, voluptates soluta provident consectetur delectus, sapiente aut eligendi et beatae cupiditate aliquid saepe vitae vero? Adipisci ducimus quasi ipsam.</p>
+
+      <p>Here are a few facts about {identity.orgName}:</p>
+      <ul>
+        <li>{identity.orgName} is an organization within TTS.</li>
+        <li>TTS is part of {identity.agency}, an agency of the {identity.country}.</li>
+        {identity.content_types.length >= 3 &&
+          <li>The content types you'll find on this site: {identity.content_types[0]}, {identity.content_types[1]}, and {identity.content_types[2]}</li>
+        }
+      </ul>
+      <p>Skills at 18F include:</p>
+      <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+      </ul>
+      {happy && <p>I am happy to be learning Astro!</p>}
+
+      {finished && <p>I finished this tutorial!</p>}
+
+      {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    </BaseLayout>
   </body>
 </html>

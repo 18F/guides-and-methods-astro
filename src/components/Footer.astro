@@ -1,0 +1,49 @@
+---
+import Social from './Social.astro';
+const platform = "github";
+const orgName = "18F";
+
+const socialMediaLinks = {
+  linkedIn: "https://www.linkedin.com/company/gsa18f/",
+}
+---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <p>Learn more about {orgName}'s projects on <a href={`https://www.${platform}.com/${orgName}`}>{platform}</a>!</p>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__contact-links mobile-lg:grid-col-12">
+          <div class="usa-footer grid-row grid-gap-1">
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--twitter" href={socialMediaLinks.twitter}>
+                <Social platform="twitter" username="18F" />
+                <span>Twitter</span>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--github" href={socialMediaLinks.github}>
+                <Social platform="github" username="18F" />
+                <span>Github</span>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--linkedin" href={socialMediaLinks.linkedIn}>
+                <Social platform="linkedin" customUrl={socialMediaLinks.linkedIn} />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</footer>
