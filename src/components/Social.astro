@@ -1,7 +1,8 @@
 ---
 const { platform, username, customUrl } = Astro.props;
 ---
-<a class="usa-social-link usa-social-link--twitter" href={customUrl ? customUrl : `https://www.${platform}.com/${username}`}>{platform}</a>
+<a class=`usa-social-link usa-social-link--${platform}` href={customUrl ? customUrl : `https://www.${platform}.com/${username}`}>{platform}</a>
+<span>{platform.uppercase}</span>
 <style>
   a {
     padding: 0.5rem 1rem;

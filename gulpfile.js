@@ -16,7 +16,7 @@ uswds.settings.version = 3;
 */
 // uswds.paths.dist.css = './assets/css';
 // uswds.paths.dist.theme = './sass/uswds';
-uswds.paths.dist.css = './src/styles';
+uswds.paths.dist.css = './_site/assets/css';
 uswds.paths.dist.theme = './sass/uswds';
 
 /**
