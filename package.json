@@ -1,5 +1,6 @@
 {
   "name": "guides-and-methods-astro",
+  "type": "module",
   "version": "1.0.0",
   "description": "Prototype of 18F's Guides and Methods using the Astro static site generator",
   "main": "index.js",
