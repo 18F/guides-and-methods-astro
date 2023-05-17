@@ -17,6 +17,8 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/uswds-init.min.js`}></script>
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/styles.css`} />
   </head>
   <body>
     <Header />
@@ -25,6 +27,7 @@ const { pageTitle } = Astro.props;
     <slot />
     <Footer />
     <script>import "../scripts/menu.js";</script>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/uswds.min.js`}></script>
   </body>
 </html>
 <style>

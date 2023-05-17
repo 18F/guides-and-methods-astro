@@ -5,8 +5,8 @@ pubDate: 2023-05-09
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The full Astro logo.'
+    url: 'https://commons.wikimedia.org/wiki/Category:Animated_GIF_files_between_50_MP_and_100_MP#/media/File:2022-01-15_eruption_of_Hunga_Tonga.gif'
+    alt: 'Large GIF of satellite image'
 tags: ["astro", "blogging", "learning in public"]
 ---
 
