@@ -15,13 +15,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@astrojs/mdx": "^0.19.1",
     "astro": "^2.4.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.5",
     "@typescript-eslint/parser": "^5.59.5",
-    "@uswds/uswds": "^3.4.1",
     "@uswds/compile": "^1.0.0",
+    "@uswds/uswds": "^3.4.1",
     "astro-eslint-parser": "^0.14.0",
     "eslint": "^8.40.0",
     "eslint-plugin-astro": "^0.27.0",
